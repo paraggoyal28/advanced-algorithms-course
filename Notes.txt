@@ -1,0 +1,31 @@
+Cuts 
+Given a network G, a cut C, is a set of vertices of G such that C contains all the sources of G and no sinks of G.
+The size of the cut is given by
+|C| = sum of all e out of C (Ce)
+
+Let G be a network. For any flow F and any cut C,
+|f| <= |C|
+
+
+For any cut C
+MaxFlow <= |C|
+
+MaxFlow-MinCut
+For any network G,
+max flow |f| = min cuts |C|
+
+There is always a cut small enough to give the correct upper bound.
+
+Ford-Fulkerson Algorithm
+Idea:
+Start with zero flow
+Repeatedly add flow
+Stop when cannot add
+
+If capacities all are integers, then all flows produced are integers.
+
+If a network G has integral capacities, there is a maximum flow with integral flow rates.
+
+Total Runtime: O(|E||f|) |f| is the size of maximum flow.
+
+Ford-Fulkerson algorithm is quite slow if |f| is large.
